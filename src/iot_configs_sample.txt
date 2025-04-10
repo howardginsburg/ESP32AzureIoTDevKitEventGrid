@@ -1,0 +1,51 @@
+#ifndef IOT_CONFIGS_H
+#define IOT_CONFIGS_H
+
+// Wifi
+#define IOT_CONFIG_WIFI_SSID "<YourWIFISSID>"
+#define IOT_CONFIG_WIFI_PASSWORD "<YourWIFIPassword"
+
+#define MQTT_SERVER "<Your MQTT HostName ex: eventgridmqtt.eastus2-1.ts.eventgrid.azure.net>"
+#define MQTT_PORT 8883
+#define MQTT_CLIENT "ESP32Client"
+#define MQTT_USER "Device1"
+#define MQTT_PASSWORD ""
+
+//Device 1
+#define DEVICE_PRIVATE_KEY \
+"-----BEGIN PRIVATE KEY-----\n"\
+"Replace with your Device1 private key"\
+"-----END PRIVATE KEY-----\n"
+
+#define DEVICE_PUBLIC_KEY \
+"-----BEGIN CERTIFICATE-----\n"\
+"Replace with your Device1 public key"\
+"-----END CERTIFICATE-----\n"
+
+
+// Publish 1 message every 10 seconds.
+#define TELEMETRY_FREQUENCY_IN_SECONDS 10
+
+// For how long the MQTT password (SAS token) is valid, in minutes.
+// After that, the sample automatically generates a new password and re-connects.
+#define MQTT_PASSWORD_LIFETIME_IN_MINUTES 60
+
+//Digicert Global G3 Root CA is what EventGrid uses as the Root CA.
+#define ROOT_CA \
+"-----BEGIN CERTIFICATE-----\n"\
+"MIICPzCCAcWgAwIBAgIQBVVWvPJepDU1w6QP1atFcjAKBggqhkjOPQQDAzBhMQsw\n"\
+"CQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cu\n"\
+"ZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBHMzAe\n"\
+"Fw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVTMRUw\n"\
+"EwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5jb20x\n"\
+"IDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEczMHYwEAYHKoZIzj0CAQYF\n"\
+"K4EEACIDYgAE3afZu4q4C/sLfyHS8L6+c/MzXRq8NOrexpu80JX28MzQC7phW1FG\n"\
+"fp4tn+6OYwwX7Adw9c+ELkCDnOg/QW07rdOkFFk2eJ0DQ+4QE2xy3q6Ip6FrtUPO\n"\
+"Z9wj/wMco+I+o0IwQDAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAd\n"\
+"BgNVHQ4EFgQUs9tIpPmhxdiuNkHMEWNpYim8S8YwCgYIKoZIzj0EAwMDaAAwZQIx\n"\
+"AK288mw/EkrRLTnDCgmXc/SINoyIJ7vmiI1Qhadj+Z4y3maTD/HMsQmP3Wyr+mt/\n"\
+"oAIwOWZbwmSNuJ5Q3KjVSaLtx9zRSX8XAbjIho9OjIgrqJqpisXRAL34VOKa5Vt8\n"\
+"sycX\n"\
+"-----END CERTIFICATE-----\n"
+
+#endif
